@@ -340,14 +340,15 @@
 
 .relative1{
   position: absolute;
-  top: 40%;
-  right: 30%;
+  top: 10%;
+  left: 5%;
    
 }
 
 .relative1 h1{
-  font-size: 5rem;
-  color: whitesmoke;
+  font-size: 4vw;
+  color: white;
+  text-shadow: 2px 2px black;
 }
 
 .prev {

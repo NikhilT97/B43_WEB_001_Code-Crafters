@@ -238,12 +238,29 @@
         object-fit: cover;
       }
       footer {
-        text-align: center;
-        padding: 10px;
-        background: #333;
-        color: white;
-        margin-top: 20px;
+      background-color: #f9f9f9;
+      padding: 40px 20px;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    .footer-bottom .icon-container {
+      display: flex;
+      gap: 1rem;
+    }
+    @media screen and(max-width:480px) {
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+        flex-wrap: wrap;
+        align-items: center;
       }
+    }
+
       .addcartbtn {
         padding: 10px 15px;
         color: white;
@@ -411,7 +428,7 @@
 
     <footer>
       <div class="footer-bottom">
-        <p>© 2024, ModeSens Inc</p>
+        <p>© 2025, ModeSens Inc</p>
         <span class="mode-toggle">LIGHT MODE</span>
         <div class="icon-container">
           <div><i class="ri-pinterest-fill"></i></div>
@@ -525,19 +542,13 @@
         addcart.classList.add("addcartbtn");
         addcart.setAttribute("id", id);
 
-        // addcart.dataset.id = product.id;
-        // addcart.dataset.title = product.Designers;
-        // addcart.dataset.price = product.price; // Dummy price
-        // addcart.dataset.image = product.image2;
-        //
-
-        //console.log(price)
+      
         productDiv.innerHTML = `
-                        <img src="${image1}" alt="${description}">
+                         <img src="${image1}" alt="${description}">
                         <h3>${Designers}</h3>
-                        <p>${category}</p>
+                       
                         <p>${description}</p>
-                        <p>Price: ${price}</p>
+                        <p>Price: ${price}$</p>
                     `;
         productDiv.append(addcart);
         productsContainer.appendChild(productDiv);

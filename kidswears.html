@@ -242,13 +242,39 @@
         /* border: 2px solid; */
         object-fit: cover;
       }
+     
       footer {
-        text-align: center;
-        padding: 10px;
-        background: #333;
-        color: white;
-        margin-top: 20px;
+      background-color: #f9f9f9;
+      padding: 40px 20px;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    .footer-bottom .icon-container {
+      display: flex;
+      gap: 1rem;
+    }
+    @media screen and(max-width:480px) {
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+        flex-wrap: wrap;
+        align-items: center;
       }
+    }
+
+
+
+
+
+
+ 
+
+
       .addcartbtn {
         padding: 10px 15px;
         color: white;
@@ -392,8 +418,23 @@
     </main>
 
     <footer>
-      <p>&copy; 2025 Your Company. All rights reserved.</p>
+      <div class="footer-bottom">
+        <p>© 2025, ModeSens Inc</p>
+        <span class="mode-toggle">LIGHT MODE</span>
+        <div class="icon-container">
+          <div><i class="ri-pinterest-fill"></i></div>
+          <div><i class="ri-twitter-fill"></i></div>
+          <div><i class="ri-instagram-fill"></i></div>
+          <div><i class="ri-facebook-fill"></i></div>
+          <div><i class="ri-weibo-fill"></i></div>
+          <div><i class="ri-youtube-fill"></i></div>
+          <div><i class="ri-qq-fill"></i></div>
+          <div><i class="ri-tiktok-fill"></i></div>
+          <div><i class="ri-linkedin-fill"></i></div>
+        </div>
+      </div>
     </footer>
+    
   </body>
 </html>
 <script>
@@ -476,7 +517,7 @@
       );
 
       for (let key in data) {
-        //console.log(data[key])
+        
         let {
           id,
           Designers,
@@ -496,17 +537,11 @@
 
         //console.log(price)
         productDiv.innerHTML = `
-                        <div id="card">
-                                <div id="prod-image-container">
-                                    <img src="${product.image2}" alt="${product.description}">
-                                </div>
-                                <div>
-                                    <h3>${product.Designers}</h3>
-                                
-                                <p>${product.description}</p>
-                                <p>Price: ${product.price}$ </p>
-                                </div>
-                        </div>
+                         <img src="${image1}" alt="${description}">
+                        <h3>${Designers}</h3>
+                       
+                        <p>${description}</p>
+                        <p>Price: ${price}$</p>
                     `;
         productDiv.append(addcart);
         productsContainer.appendChild(productDiv);

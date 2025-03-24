@@ -465,7 +465,7 @@
         addcart.setAttribute("id", id);
 
         productDiv.innerHTML = `
-                        <div id="card" onclick="productDetails(${id})">
+                        <div id="card">
                                 <div id="prod-image-container">
                                     <img src="${product.image2}" alt="${product.description}">
                                 </div>
@@ -542,11 +542,12 @@ function productDetails(id){
         addcart.setAttribute("id", id);
 
         productDiv.innerHTML = `
-                        <img src="${image1}" alt="${description}">
+                         <img src="${image1}" alt="${description}">
                         <h3>${Designers}</h3>
-                        <p>${category}</p>
+                       
                         <p>${description}</p>
-                        <p>Price: ${price}</p>
+                        <p>Price: ${price}$</p>
+                        </div>
                     `;
         productDiv.append(addcart);
         productsContainer.appendChild(productDiv);
